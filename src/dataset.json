@@ -1,42 +1,42 @@
 {
     "init": {
         "answers": [
-            {"content": "仕事を依頼したい", "nextId": "job_offer"},
-            {"content": "エンジニアのキャリアについて相談したい", "nextId": "consultant"},
-            {"content": "学習コミュニティについて知りたい", "nextId": "community"},
-            {"content": "お付き合いしたい", "nextId": "dating"}
+            {"content": "経歴を教えてください", "nextId": "career"},
+            {"content": "好きなことは何ですか？", "nextId": "consultant"},
+            {"content": "どうやってプログラミングの勉強をしてるんですか？", "nextId": "webapp"},
         ],
-        "question": "こんにちは！🐯トラハックへのご用件はなんでしょうか？"
+        "question": "はじめまして！ご用件はなんでしょうか？"
     },
-    "job_offer": {
+    "career": {
         "answers": [
-            {"content": "Webサイトを制作してほしい", "nextId": "website"},
-            {"content": "Webアプリを開発してほしい", "nextId": "webapp"},
-            {"content": "自動化ツールを作ってほしい", "nextId": "automation_tool"},
-            {"content": "その他", "nextId": "other_jobs"}
+            {"content": "了解！ありがとう！", "nextId": "website"},
+            {"content": "好きなことは何ですか？", "nextId": "consultant"},
+            {"content": "最初の質問に戻る", "nextId": "init"}
         ],
-        "question": "どのようなお仕事でしょうか？"
+        "question": "出身は東京都の三鷹市というところで、一橋大学経済学部を卒業後新卒で広告代理店に入社し、現在3年目になります！"
     },
     "website": {
         "answers": [
             {"content": "問い合わせる", "nextId": "contact"},
             {"content": "最初の質問に戻る", "nextId": "init"}
         ],
-        "question": "Webサイト細作についてですね。コチラからお問い合わせできます。"
+        "question": "とんでもございません！また何かあればコチラからお問い合わせ下さい！"
     },
     "webapp": {
         "answers": [
-            {"content": "問い合わせる", "nextId": "contact"},
+            {"content": "へぇ、仙人みたい。ありがとう！", "nextId": "website"},
+            {"content": "どんな言語を勉強しているんですか？", "nextId": "automation_tool"},
             {"content": "最初の質問に戻る", "nextId": "init"}
         ],
-        "question": "Webアプリ開発についてですね。コチラからお問い合わせできます。"
+        "question": "毎朝3時~4時台に起きて早朝プログラミングをしています！"
     },
     "automation_tool": {
         "answers": [
-            {"content": "問い合わせる", "nextId": "contact"},
+            {"content": "そうなんですね！ありがとう！", "nextId": "website"},
+            {"content": "実際に何か作ったりしてるんですか？", "nextId": "https://portfolio-e9886.web.app/work"},
             {"content": "最初の質問に戻る", "nextId": "init"}
         ],
-        "question": "自動化ツール開発についてですね。コチラからお問い合わせできます。"
+        "question": "最初はRubyでバックエンドの勉強をして、今はReactでフロントエンドの勉強をしています！"
     },
     "other_jobs": {
         "answers": [
@@ -47,33 +47,18 @@
     },
     "consultant": {
         "answers": [
-            {"content": "YouTubeで動画を見る", "nextId": "https://www.youtube.com/channel/UC-bOAxx-YOsviSmqh8COR0w"},
-            {"content": "学習コミュニティについて知りたい", "nextId": "community"},
+            {"content": "了解！ありがとう！", "nextId": "website"},
+            {"content": "へー！甲子園で印象に残っていることは？", "nextId": "community"},
             {"content": "最初の質問に戻る", "nextId": "init"}
         ],
-        "question": "トラハックは普段からYouTubeでキャリアについて発信しています。また、僕が運営するエンジニア向け学習コミュニティ内でも相談に乗っていますよ。"
+        "question": "高校野球です！夏は一人で甲子園に行って、ビール片手に球児たちからエネルギーをもらっています！"
     },
     "community": {
         "answers": [
-            {"content": "どんな活動をしているの？", "nextId": "community_activity"},
-            {"content": "コミュニティに参加したい", "nextId": "https://torahack.web.app/community/"},
+            {"content": "了解！ありがとう！", "nextId": "website"},
+            {"content": "Wikipedia", "nextId": "https://ja.wikipedia.org/wiki/%E7%AC%AC88%E5%9B%9E%E5%85%A8%E5%9B%BD%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%E9%87%8E%E7%90%83%E9%81%B8%E6%89%8B%E6%A8%A9%E5%A4%A7%E4%BC%9A%E6%99%BA%E8%BE%AF%E5%92%8C%E6%AD%8C%E5%B1%B1%E5%AF%BE%E5%B8%9D%E4%BA%AC"},
             {"content": "最初の質問に戻る", "nextId": "init"}
         ],
-        "question": "2020年3月から学習コミュニティを始めました！🎉Webエンジニアへの転職を目指す人向けに、プログラミングを教えたりキャリアの相談に乗っています。"
-    },
-    "community_activity": {
-        "answers": [
-            {"content": "さらに詳細を知りたい", "nextId": "https://youtu.be/tIzE7hUDbBM"},
-            {"content": "コミュニティに参加したい", "nextId": "https://torahack.web.app/community/"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
-        ],
-        "question": "フロントエンド向けの教材の提供、キャリアや勉強法に関するメルマガの配信、週1のオンライン作業会などを開催しています！\n詳細はYouTube動画で紹介しています。"
-    },
-    "dating": {
-        "answers": [
-            {"content": "DMする", "nextId": "https://twitter.com/torahack_"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
-        ],
-        "question": "まずは一緒にランチでもいかがですか？DMしてください😘"
+        "question": "ハンカチ王子率いる早実が優勝した2006年夏の甲子園です！特に準々決勝の智弁和歌山 vs 帝京の試合は最高です！詳しくはWikipediaで調べてみて下さい！"
     }
 }
